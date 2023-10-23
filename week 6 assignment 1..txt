@@ -1,0 +1,190 @@
+﻿Question.1
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int matrix[5][5];
+    for(int i=0; i<=4;i++){
+        for(int j=0; j<=4; j++){
+            matrix[i][j]=10;
+        }
+    }
+    for(int i=0; i<=4; i++){
+        for(int j=0; j<=4; j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+
+
+
+
+Question.2
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a[3][3]={1,2,3,4,5,6,7,8,9};
+    int b[3][3]={4,5,8,0,0,8,1,2,0};
+    for(int i=0; i<=2; i++){
+        for(int j=0; j<=2; j++){
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    for(int i=0; i<=2; i++){
+        for(int j=0; j<=2; j++){
+            cout<<b[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    for(int i=0; i<=2; i++){
+        for(int j=0; j<=2; j++){
+            b[i][j]+=a[i][j];
+        }
+    }
+    for(int i=0; i<=2; i++){
+        for(int j=0; j<=2; j++){
+            cout<<b[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+
+
+
+
+Question.3
+    #include<iostream>
+    using namespace std;
+    int main(){
+    int m,n;
+    cout << "Enter the number of rows : ";
+    cin >> m;
+    cout << "Enter the number of columns : ";
+    cin >> n;
+    int a[m][n];
+    cout << "Enter the matrix element : ";
+    for(int i = 0 ; i <= m-1 ; i++){
+    for(int j = 0 ; j <= n-1 ; j++){
+    cin >> a[i][j];
+     }
+    }
+    int l1 , l2 , r1 , r2;
+    cout << "Enter the value of first coordinate : ";
+    cin >> l1 >> r1;
+    cout << "Enter the value of second coordinate : ";
+    cin >> l2 >> r2;
+    int sum=0;
+    // addition
+    for(int i=l1; i<=l2; i++){
+        for(int j=r1; j<=r2; j++){
+            sum += a[i][j];
+        }
+    }
+    cout<<sum;
+    }
+
+
+
+
+
+
+// Question.4
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     int m;
+//     cout<<"enter the no of rows";
+//     cin>>m;
+//     int n;
+//     cout<<"enter the no of column";
+//     cin>>n;
+//     int arr[m][n];
+//     for(int i=0; i<=m-1; i++){ //rows
+//         for(int j=0; j<=n-1; j++){ //column
+//             cin>>arr[i][j];
+//         }
+//     }
+//     int max=INT_MIN;
+//     // print
+//     for(int i=0; i<=m-1; i++){ //rows
+//         for(int j=0; j<=n-1; j++){ //column
+//             if(max<arr[i][j]){
+//                 max= arr[i][j];
+//             }
+//         }
+//     }
+//         cout<<max;
+//     }
+
+
+
+
+
+
+Question.5
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int m;
+    cout<<"enter the no of rows";
+    cin>>m;
+    int n;
+    cout<<"enter the no of column";
+    cin>>n;
+    int arr[m][n];
+    for(int i=0; i<=m-1; i++){ //rows
+        for(int j=0; j<=n-1; j++){ //column
+            cin>>arr[i][j];
+        }
+    }
+    int maxsum=INT_MIN;
+    int maxrow = -1;
+    // print
+    for(int i=0; i<=m-1; i++){ //rows
+        int sum=0;
+        for(int j=0; j<=n-1; j++){ //column
+            sum += arr[i][j];
+        }
+        if(sum>maxsum){
+            maxsum = sum;
+            maxrow = i;
+        }
+    }
+        cout<<maxsum<<" "<<maxrow;
+    }
+
+
+
+
+
+
+Question.6
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int m;
+    cout<<"enter the no of rows/column";
+    cin>>m;
+    int arr[m][m];
+    for(int i=0; i<=m-1; i++){ //rows
+        for(int j=0; j<=m-1; j++){ //column
+            cin>>arr[i][j];
+        }
+    }
+    // printing middle row and column
+    for(int i=0; i<=m-1; i++){ //rows
+        for(int j=0; j<=m-1; j++){ //column
+            if(i==m/2 || j==m/2) cout<<arr[i][j]<<" ";
+            else cout<<" "<<" ";
+        }
+        cout<<endl;
+    }
+   
+    }
